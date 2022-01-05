@@ -95,5 +95,13 @@ public class Restaurant {
     
     
     
-    
+    public int getOrderValue(List<String> orderedItemNames){
+        int totalCost = 0;
+        for (String orderedItemName : orderedItemNames) {
+            totalCost += findItemByName(orderedItemName).getPrice();
+        }
+        return totalCost;
+    }
 }
+    
+
